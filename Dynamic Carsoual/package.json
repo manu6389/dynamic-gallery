@@ -1,0 +1,42 @@
+{
+  "name": "dynamic-carousel",
+  "version": "1.1.1",
+  "description": "The dynamic carousel script for feed based carousels.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "npm run compile && npm run docs",
+    "compile": "rollup -c rollup.config.js -i src/index.js",
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "documentation build src/index.js -f html -o ./dist/`node -e \"console.log(require('./package.json').version)\"`/docs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "swiper": "^7.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/eslint-parser": "^7.15.0",
+    "@babel/plugin-external-helpers": "^7.14.5",
+    "@babel/plugin-transform-arrow-functions": "^7.14.5",
+    "@babel/plugin-transform-block-scoped-functions": "^7.14.5",
+    "@babel/plugin-transform-block-scoping": "^7.15.3",
+    "@babel/plugin-transform-classes": "^7.14.9",
+    "@babel/plugin-transform-destructuring": "^7.14.7",
+    "@babel/plugin-transform-shorthand-properties": "^7.14.5",
+    "@babel/plugin-transform-spread": "^7.14.6",
+    "@babel/plugin-transform-template-literals": "^7.14.5",
+    "@babel/preset-env": "^7.15.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-multi-entry": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-replace": "^3.0.0",
+    "autoprefixer": "10.3.1",
+    "documentation": "^13.2.5",
+    "eslint": "^7.32.0",
+    "rollup": "^2.56.2",
+    "rollup-plugin-postcss": "4.0.1",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}
